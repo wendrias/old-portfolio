@@ -1,0 +1,213 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-section {
+    height: 100vh;
+    margin-bottom: 20px;
+}
+
+#side-navbar a {
+    position: fixed;
+    font-family: Prosto One;
+    background: black;
+    line-height: 50px;
+    padding: 0 10px 0 10px;
+    width: 32vh;
+    height: 50px;
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    margin-left: -28vh;
+    border-bottom: gray solid;
+    opacity: .4;
+    transition: margin-left 1s, opacity 1s;
+    z-index: 2;
+}
+
+#side-navbar a:first-child {
+    margin-top: 50px;
+}
+
+#side-navbar a:nth-child(2) {
+    margin-top: 110px;
+}
+
+#side-navbar a:nth-child(3) {
+    margin-top: 170px;
+}
+
+#side-navbar a:nth-child(4) {
+    margin-top: 230px;
+}
+
+#side-navbar a:hover {
+    opacity: 1;
+    margin-left: 0;
+}
+
+#welcome-section {
+    background: url("https://i.giphy.com/media/13bGgH9VnEDsuA/giphy.webp");
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: "welcome-header" "welcome-nav";
+    color: black;
+}
+
+#welcome-section header {
+    grid-area: "welcome-header";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    line-height: 0;
+    background-position: center;
+    font-family: Prosto One;
+}
+
+#welcome-section header h1 {
+    font-size: 40px;
+}
+
+#navbar {
+    grid-area: "welcome-nav";
+    width: 100%;
+    length: 100%;
+    font-family: Prosto One;
+}
+
+#navtrigger {
+    position: absolute;
+    margin-left: 43%;
+    opacity: .7;
+    transition: margin-left 2s;
+}
+
+#navtrigger img {
+    width: 130px;
+}
+
+#nav-options {
+    border-bottom: solid darkblue 2px;
+    list-style: none;
+    margin-left: -80vw;
+    text-align: center;
+    width: 80vw;
+    height: 50%;
+    transition: margin-left 2s;
+}
+
+#nav-options a {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    color: #cbd3dd;
+    text-decoration: none;
+}
+
+#navbar:hover #navtrigger {
+    margin-left: 80%;
+}
+
+#navbar:hover #nav-options {
+    margin-left: 0;
+}
+
+#nav-options li:hover {
+    color: #c2d5df;
+    transform: scale(1.02);
+}
+
+#projects {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: .5fr 3fr 1fr;
+    grid-template-areas: "header" "projects" "summary";
+    background: url("http://archive-uy.com/wp-content/uploads/2018/02/peaceful-design-branch-clipart-tree-clip-art-panda-free-images.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#projects-header {
+    grid-area: "header";
+    text-align: center;
+    font-family: Prosto One;
+    align-self: center;
+    font-size: 50px;
+}
+
+#project-tiles {
+    grid-area: "projects";
+    background: url("http://www.clker.com/cliparts/W/7/q/n/h/d/nest-hi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.project-tile {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    background: white;
+    border: black solid .5px;
+    border-radius: 20px;
+    left-margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(.3);
+    transition: transform 1s;
+}
+
+.project-tile img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.project-tile p {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    font-family: Prosto One;
+    padding-bottom: 10px;
+}
+
+.project-tile:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+#tile-1 {
+    left: 32%;
+    top: 60px;
+}
+
+#tile-2 {
+    left: 42%;
+    top: 70px;
+}
+
+#tile-3 {
+    left: 52%;
+    top: 60px;
+}
+
+#project-summary {
+    grid-area: "summary";
+    text-align: center;
+}
+
+#project-summary p {
+    background: black;
+    color: white;
+    font-family: prosto one;
+    font-size: 25px;
+    padding: 10px 0 10px 0;
+}
+
+#profile-img {
+    border-radius: 50%;
+    width: 100px;
+}
