@@ -411,4 +411,8 @@ footer span {
     nav h1 {
         display: none;
     }
+    #centered-content {
+        top: 0;
+        height: 100vh;
+    }
 }
