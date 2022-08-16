@@ -12,18 +12,18 @@
     <title>Wastena Endrias</title>
 </head>
 
-<body>
+<body id="home-body" class="invisible" onload="showPage()">
     <a id="menu-icon"><span class="material-symbols-outlined">menu</span></a>
     <nav id="nav">
         <ul>
-            <a id="about-nav" href="#">About Me</a>
-            <a id="proj-nav" href="#">Projects</a>
-            <a id="resume-nav" href="#">Resume</a>
-            <a id="contact-nav" href="#">Contact</a>
+            <div><a id="about-nav" href="#">About Me</a></div>
+            <div><a id="proj-nav" href="#">Projects</a></div>
+            <div><a id="resume-nav" href="#">Resume</a></div>
+            <div><a id="contact-nav" href="#">Contact</a></div>
         </ul>
     </nav>
 
-    <main>
+    <main id="home-content">
         <div id='title'>
             <div id="name">
                 <h3 class="secondary-font">Hello, I'm</h3>
@@ -33,9 +33,9 @@
         </div>
     </main>
     <div id="img"></div>
-    <!--   <footer>
-        <p>Website designed and developed by Wastena Endrias</p>
-      </footer> -->
-</body>
+    <footer>
+        <p>Website created by<span> Wastena Endrias<span></p>
+      </footer>
+    </body>
 
 </html>

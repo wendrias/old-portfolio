@@ -3,7 +3,20 @@ body {
     margin: 0;
     font-family: "Roboto";
     color: white;
-    background-image: linear-gradient(#44A08D, #093637);
+    background-image: linear-gradient(#44a08d, #093637);
+}
+
+#projects-body {
+    height: 100% !important;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 3s;
 }
 
 
@@ -12,6 +25,7 @@ body {
   purple and pink: linear-gradient(#642B73, #642B73, #C6426E)
   orange and yellow:  linear-gradient(#F2994A, #F2C94C)
   mint to orange (ehh): linear-gradient(#30E8BF, #FF8235)
+  darker blue-green: linear-gradient(#44a08d, #093637)
   */
 
 #menu-icon {
@@ -19,9 +33,8 @@ body {
 }
 
 nav {
-    height: 10%;
+    height: 10vh;
     margin: 0;
-    padding: 0;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -43,13 +56,32 @@ h2 {
     font-size: 12pt;
 }
 
+.current-page {
+    border-radius: 10px 10px 0 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
 a {
     color: white;
 }
 
-nav a {
-    padding: 5% 2vw 5% 2vw;
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
     margin: 0;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 2vw;
+    padding: 0 2vw;
+    margin: 0;
+}
+
+a {
     text-decoration-line: none;
 }
 
@@ -57,10 +89,10 @@ nav a:hover {
     color: aliceblue;
 }
 
-main {
+#home-content {
     padding-left: 10vw;
     padding-bottom: 10vh;
-    height: 80vh;
+    height: 75vh;
     width: 90vw;
     display: flex;
     align-items: center;
@@ -116,7 +148,104 @@ main {
     /*   border-radius: 10% 10% 0 0; */
 }
 
+#projects-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    width: 95vw;
+    height: 100%;
+    /*   background: rgba(255,255,255, .05); */
+    padding-left: 5vw;
+    padding-bottom: 5vh;
+}
+
+#projects {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#projects a {
+    background: rgba(255, 255, 255, 0.8);
+    color: gray;
+    height: 100%;
+    width: 25vw;
+    margin: 1vw;
+    border-radius: 10pt;
+    transition: background 1s;
+}
+
+#projects a:hover {
+    background: white;
+    transition: background 1s;
+}
+
+#projects .proj-img {
+    height: 20vh;
+    width: 25vw;
+    background-size: cover;
+    border-radius: 10pt 10pt 0 0;
+}
+
+#projects a .desc {
+    padding: 0 2vw;
+}
+
+#img1 {
+    background-image: url("https://via.placeholder.com/400X300/09f/fff.png");
+}
+
+#img2 {
+    background-image: url("https://i.imgur.com/Epk3pNI.png");
+}
+
+#img3 {
+    background-image: url("https://i.imgur.com/0azgtCI.png");
+}
+
+footer {
+    postion: sticky;
+    height: 5vh;
+    width: 95vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 99999;
+}
+
+footer p {
+    font-size: 7pt;
+}
+
+footer span {
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
+    #home-content {
+        height: 80vh;
+    }
+    #projects-body {
+        height: 100%;
+        background-image: linear-gradient(#44a08d, #093637, #44a08d, #093637);
+    }
+    #projects-wrapper {
+        height: 100%;
+    }
+    #projects-content {
+        height: 100%;
+    }
     #menu-icon {
         position: fixed;
         width: 70vw;
@@ -135,7 +264,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #44A08D;
+        background: #44a08d;
         position: fixed;
         width: 80vw;
         height: 100vh;
@@ -145,7 +274,7 @@ main {
     }
     nav a {
         color: white;
-        margin-top: 5vh;
+        margin-top: 2vh;
         text-shadow: 1px 1px grey;
     }
     .nav-show {
@@ -154,9 +283,46 @@ main {
         transition: margin-left 1s, background 1s;
     }
     nav ul {
+        height: 50%;
         display: flex;
         flex-direction: column;
         padding: 0;
         margin: 0;
+    }
+    .current-page {
+        background: none;
+        border-radius: 0;
+    }
+    #projects-wrapper {
+        width: 90vw;
+    }
+    #projects-wrapper h3,
+    #projects-wrapper p {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    #projects {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    #projects-body {
+        height: 100%;
+    }
+    #projects a {
+        /*     display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; */
+        width: 90vw;
+        height: 100%;
+        margin: 3vh 0vw;
+    }
+    #projects .proj-img {
+        height: 40vh;
+        width: 90vw;
+        background-size: fill;
+        background-repeat: no-repeat;
+        border-radius: 10pt;
     }
 }
