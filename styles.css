@@ -207,6 +207,10 @@ main {
     transition: background 1s;
 }
 
+#projects h3 {
+    color: #093637;
+}
+
 #projects a:hover {
     background: white;
     transition: background 1s;
@@ -367,20 +371,18 @@ footer span {
         border-radius: 0;
     }
     #projects-wrapper {
+        margin-top: 10vh;
         width: 90vw;
     }
     #projects-wrapper h3,
     #projects-wrapper p {
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 5vw !important;
+        padding-right: 5vw !important;
     }
     #projects {
         width: 100%;
         flex-direction: column;
         align-items: center;
-    }
-    #projects-body {
-        height: 100%;
     }
     #projects a {
         /*     display: flex;
@@ -408,11 +410,18 @@ footer span {
     #about-text h1 {
         font-size: 30px;
     }
-    nav h1 {
-        display: none;
-    }
     #centered-content {
         top: 0;
         height: 100vh;
+    }
+    main {
+        position: relative;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav h1 {
+        margin: 0;
+        font-size: 20px;
     }
 }
