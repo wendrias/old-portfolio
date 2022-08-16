@@ -1,10 +1,20 @@
+//enter page transition
 function showPage() {
     document.querySelector('.invisible').classList.add('visible');
     document.querySelector('.invisible').classList.remove('invisible');
 
 }
 
+//exit page transition  
 
+function leavePage(url) {
+    document.querySelector('.visible').classList.add('invisible');
+    document.querySelector('.visible').classList.remove('visible');
+    setTimeout(() => { window.location.replace(url) }, 1000);
+}
+
+
+//menu toggle
 document.getElementById('menu-icon').onclick = () => {
     if (document.getElementById('nav').classList.contains('nav-show')) {
         document.getElementById('nav').classList.remove('nav-show');
@@ -39,7 +49,7 @@ let newGradient = () => {
 }
 
 if (document.getElementsByTagName('body')[0].id == "home-body") {
-    document.querySelectorAll('#home-body')[0].onclick = () => {
+    document.querySelectorAll('#home-content')[0].onclick = () => {
         document.querySelectorAll('body')[0].setAttribute('style', 'background-image: linear-gradient\(' + newGradient() + ',' + newGradient() + '\)');
     }
 }

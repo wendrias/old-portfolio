@@ -6,17 +6,14 @@ body {
     background-image: linear-gradient(slategray, seagreen);
 }
 
-#projects-body {
-    height: 100% !important;
-}
-
 .invisible {
     opacity: 0;
+    transition: opacity 1s;
 }
 
 .visible {
     opacity: 1;
-    transition: opacity 3s;
+    transition: opacity 1s;
 }
 
 
@@ -36,12 +33,30 @@ body {
 }
 
 nav {
+    position: absolute;
     height: 10vh;
     margin: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    z-index: 1;
     /*   background: rgba(255,255,255, .1); */
+}
+
+nav h1 {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    margin-left: 5vw;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 h1 {
@@ -61,7 +76,7 @@ h2 {
 
 .current-page {
     /*   border-radius: 10px 10px 0 0; */
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 a {
@@ -92,9 +107,13 @@ nav a:hover {
     color: aliceblue;
 }
 
+main {
+    position: absolute;
+    min-height: 100vh;
+}
+
 #home-content {
     padding-left: 10vw;
-    padding-bottom: 10vh;
     height: 75vh;
     width: 90vw;
     display: flex;
@@ -149,11 +168,11 @@ nav a:hover {
 }
 
 #projects-content {
-    height: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #projects-wrapper {
@@ -198,6 +217,7 @@ nav a:hover {
     width: 25vw;
     background-size: cover;
     border-radius: 10pt 10pt 0 0;
+    background-position: center;
 }
 
 #projects a .desc {
@@ -220,9 +240,58 @@ nav a:hover {
     background-image: url("img/toaster.png");
 }
 
+#centered-content {
+    position: relative;
+    min-height: 90vh !important;
+    top: 10vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 0;
+}
+
+#about-card {
+    width: 70%;
+    height: 70vh;
+    padding: 3%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -5px 3px white;
+}
+
+#profile-img {
+    height: 30vh;
+    width: 30vh;
+    margin: 0;
+    border-radius: 100%;
+    border: rgba(255, 255, 255, 0.7) solid 3px;
+    background-image: url("img/me.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#about-text {
+    text-align: center;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3vh;
+    border-radius: 50px;
+    color: gray;
+}
+
 footer {
+    bottom: 0;
     height: 5vh;
-    width: 95vw;
+    width: 100vw;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -328,5 +397,18 @@ footer span {
         background-size: fill;
         background-repeat: no-repeat;
         border-radius: 10pt;
+    }
+    #profile-img {
+        height: 20vh;
+        width: 20vh;
+    }
+    #about-text p {
+        font-size: 14px;
+    }
+    #about-text h1 {
+        font-size: 30px;
+    }
+    nav h1 {
+        display: none;
     }
 }
