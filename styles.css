@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: "Roboto";
     color: white;
+    overflow-x: hidden;
     background-image: linear-gradient(slategray, seagreen);
 }
 
@@ -167,6 +168,10 @@ main {
     /*   border-radius: 10% 10% 0 0; */
 }
 
+#projects-body {
+    background-image: linear-gradient(slategray, seagreen, slategray) !important;
+}
+
 #projects-content {
     width: 100vw;
     display: flex;
@@ -178,9 +183,9 @@ main {
 #projects-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 2vh;
+    margin-top: 10vh;
     width: 95vw;
-    height: 78vh;
+    height: 100%;
     /*   background: rgba(255,255,255, .05); */
     padding-bottom: 5vh;
 }
@@ -198,17 +203,12 @@ main {
 }
 
 #projects a {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     color: gray;
-    height: 100%;
     width: 25vw;
     margin: 1vw;
     border-radius: 10pt;
     transition: background 1s;
-}
-
-#projects h3 {
-    color: #093637;
 }
 
 #projects a:hover {
@@ -242,6 +242,10 @@ main {
 
 #img3 {
     background-image: url("img/toaster.png");
+}
+
+#img4 {
+    background-image: url("img/schmidt.png");
 }
 
 #centered-content {
@@ -283,6 +287,20 @@ main {
 
 #about-text {
     text-align: center;
+}
+
+.white-filter {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: .2;
+    transition: opacity 1s;
+    border-radius: 10pt 10pt 0 0;
+}
+
+.white-filter:hover {
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .button {
