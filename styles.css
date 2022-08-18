@@ -4,7 +4,7 @@ body {
     font-family: "Roboto";
     color: white;
     overflow-x: hidden;
-    background-image: linear-gradient(slategray, seagreen);
+    background: linear-gradient(rgb(58, 81, 194), rgb(144, 58, 184));
 }
 
 .invisible {
@@ -76,8 +76,9 @@ h2 {
 }
 
 .current-page {
-    /*   border-radius: 10px 10px 0 0; */
+    border-radius: 30px;
     background: rgba(255, 255, 255, 0.1);
+    color: gray;
 }
 
 a {
@@ -256,13 +257,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, .1);
+    /* background-color: rgba(255, 255, 255, .1); */
     padding: 0;
 }
 
 #about-card {
-    width: 70%;
-    height: 70vh;
+    width: 60%;
+    height: 65vh;
     padding: 3%;
     border-radius: 40px;
     display: flex;
@@ -274,8 +275,8 @@ main {
 }
 
 #profile-img {
-    height: 30vh;
-    width: 30vh;
+    height: 20vh;
+    width: 20vh;
     margin: 0;
     border-radius: 100%;
     border: rgba(255, 255, 255, 0.7) solid 3px;
@@ -286,7 +287,15 @@ main {
 }
 
 #about-text {
+    height: 70%;
+}
+
+#about-text h1 {
     text-align: center;
+}
+
+#about-text p {
+    font-size: 2.3vh;
 }
 
 .white-filter {
@@ -326,6 +335,19 @@ footer p {
 
 footer span {
     font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+    nav {
+        padding-top: .5vh !important;
+        padding-right: .5vw !important;
+        padding-bottom: .5vw !important;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    #about-card p {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -431,6 +453,9 @@ footer span {
     #centered-content {
         top: 0;
         height: 100vh;
+    }
+    #about-card {
+        height: 80vh;
     }
     main {
         position: relative;

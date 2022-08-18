@@ -4,7 +4,6 @@ function showPage() {
     document.querySelector('.invisible').classList.remove('invisible');
     document.querySelectorAll('body')[0].setAttribute('style', 'background-image: linear-gradient\(' + sessionStorage.getItem('color1') + ',' + sessionStorage.getItem('color2') + '\)');
     document.querySelectorAll('#projects-body')[0].setAttribute('style', 'background-image: linear-gradient\(' + sessionStorage.getItem('color1') + ',' + sessionStorage.getItem('color2') + ',' + sessionStorage.getItem('color1') + '\) !important');
-    document.querySelectorAll('nav')[0].setAttribute('style', "background: " + sessionStorage.getItem('color1') + ";");
 }
 
 //exit page transition  
@@ -20,11 +19,9 @@ document.getElementById('menu-icon').onclick = () => {
     if (document.getElementById('nav').classList.contains('nav-show')) {
         document.getElementById('nav').classList.remove('nav-show');
         document.getElementById('menu-icon').classList.remove('nav-show');
-        document.querySelectorAll('nav')[0].setAttribute('style', "background: " + sessionStorage.getItem('color2') + "!important;");
     } else {
         document.getElementById('nav').classList.add('nav-show')
         document.getElementById('menu-icon').classList.add('nav-show');
-        document.querySelectorAll('nav')[0].setAttribute('style', "background: " + sessionStorage.getItem('color1') + ";");
     }
 };
 
