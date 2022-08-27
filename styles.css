@@ -4,7 +4,7 @@ body {
     font-family: "Roboto";
     color: white;
     overflow-x: hidden;
-    background: linear-gradient(rgb(58, 81, 194), rgb(144, 58, 184));
+    background: linear-gradient(rgb(41, 59, 145), rgb(123, 48, 157));
 }
 
 .invisible {
@@ -77,8 +77,11 @@ h2 {
 
 .current-page {
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    color: gray;
+    background: rgba(255, 255, 255, .3);
+}
+
+.current-page a {
+    color: white;
 }
 
 a {
@@ -170,7 +173,7 @@ main {
 }
 
 #projects-body {
-    background-image: linear-gradient(slategray, seagreen, slategray) !important;
+    background-image: linear-gradient(rgb(41, 59, 145), rgb(123, 48, 157)) !important;
 }
 
 #projects-content {
@@ -247,6 +250,10 @@ main {
 
 #img4 {
     background-image: url("img/schmidt.png");
+}
+
+#img5 {
+    background-image: url("img/p2p.png");
 }
 
 #centered-content {
