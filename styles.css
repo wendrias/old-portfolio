@@ -260,6 +260,10 @@ main {
     background-image: url("img/schmidt.png");
 }
 
+#img5 {
+    background-image: url("img/p2p.png");
+}
+
 #centered-content {
     position: relative;
     min-height: 90vh !important;
