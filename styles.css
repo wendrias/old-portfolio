@@ -218,6 +218,7 @@ main {
     padding-bottom: 2vh;
     border-radius: 10pt;
     transition: background .5s;
+    cursor: pointer;
 }
 
 #projects a:hover {
@@ -225,12 +226,15 @@ main {
     transition: background .5s;
 }
 
-#projects .proj-img {
-    height: 20vh;
-    width: 25vw;
+.proj-img {
     background-size: cover;
     border-radius: 10pt 10pt 0 0;
     background-position: center;
+}
+
+#projects .proj-img {
+    height: 20vh;
+    width: 25vw;
 }
 
 #projects a .desc {
@@ -241,28 +245,32 @@ main {
     padding: 0 !important;
 }
 
-#img1 {
+.img1 {
     background-image: url("img/music.png");
 }
 
-#img2 {
+.img2 {
     background-image: url("img/gpa.png");
 }
 
-#img3 {
+.img3 {
     background-image: url("img/toaster.png");
 }
 
-#img4 {
+.img4 {
     background-image: url("img/schmidt.png");
 }
 
-#img4 {
+.img4 {
     background-image: url("img/schmidt.png");
 }
 
-#img5 {
+.img5 {
     background-image: url("img/p2p.png");
+}
+
+.img6 {
+    background-image: url("img/portfolio/1.png");
 }
 
 .tag-wrapper {
@@ -313,7 +321,7 @@ main {
     margin: 0;
     border-radius: 100%;
     border: rgba(255, 255, 255, 0.7) solid 3px;
-    background-image: url("img/me.png");
+    background-image: url("img/me.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -367,7 +375,7 @@ footer span {
     font-weight: bold;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 750px) {
     /* new */
     #projects-body {
         display: flex;
@@ -384,16 +392,100 @@ footer span {
         margin-right: 5vw;
     }
     #projects-body footer {
-        bottom: -40vh;
+        bottom: -45vh;
         height: 5vh !important;
         width: 100vw;
         text-align: center;
         margin-top: 100%;
         position: absolute !important;
     }
+    .project-details-wrapper {
+        position: fixed;
+        height: 100%;
+        overflow: hidden;
+        width: 100vw;
+        background: rgba(200, 200, 200, .7);
+        z-index: 2;
+    }
+    .project-details {
+        width: 60vw;
+        height: 95vh;
+        background: white;
+        position: absolute;
+        top: 2vh;
+        left: 20vw;
+        border-radius: 20px;
+        color: gray;
+    }
+    .project-details-wrapper .proj-img {
+        max-width: 60vw;
+        height: 65vh;
+        border-radius: 0 !important;
+    }
+    .carousel span {
+        cursor: pointer;
+        color: gray;
+        padding: 3px;
+        background: rgba(255, 255, 255, .9);
+        transition: background .4s, color .4s;
+    }
+    .carousel span:hover {
+        background: white;
+        color: rgb(90, 90, 90);
+        transition: background .4s, color .4s;
+    }
+    .carousel .carousel-back {
+        border-radius: 50% 0 0 50%;
+    }
+    .carousel .carousel-forward {
+        border-radius: 0 50% 50% 0;
+    }
+    .project-details .desc {
+        padding: 0 3vw;
+    }
+    .project-details .desc {
+        padding: 0 2vw;
+        font-size: 2.7vh;
+    }
+    .close-popup {
+        position: absolute;
+        top: 1vh;
+        right: -3vw;
+        text-align: center;
+        cursor: pointer;
+        color: gray;
+        background: white;
+        padding: 2px;
+        border-radius: 50%;
+    }
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .visit-button {
+        position: fixed;
+        top: 61vh;
+        left: 71vw;
+        z-index: 9;
+        background: rgb(92, 89, 89, .6);
+        padding: 10px;
+        color: rgba(255, 255, 255, 0.7);
+        /* border-radius: 20px; */
+        font-size: small;
+        box-shadow: 1px 1px 5px gray;
+        transition: background .5s, color .5s;
+        cursor: pointer;
+    }
+    .visit-button:hover {
+        background: rgb(92, 89, 89, .8);
+        color: white;
+        transition: background .5s, color .5s;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     #home-content {
         height: 80vh;
     }
@@ -516,5 +608,77 @@ footer span {
     }
     footer {
         position: relative;
+    }
+    .project-details-wrapper {
+        display: fixed;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        width: 100vw;
+        background: rgba(200, 200, 200, .7);
+        z-index: 2;
+    }
+    .project-details {
+        width: 100vw;
+        height: 90vh;
+        background: white;
+        position: fixed;
+        border-radius: 20px;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        top: 5vh;
+    }
+    .project-details-wrapper .proj-img {
+        width: 80vw;
+    }
+    .project-details .desc {
+        padding: 0 10vw;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .close-popup {
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        color: white;
+        background: lightgray;
+        padding: 2px;
+        margin-top: 10%;
+        border-radius: 50%;
+    }
+    .carousel {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel span {
+        cursor: pointer;
+    }
+    .visit-button {
+        position: absolute;
+        top: 65vw;
+        left: 43vw;
+        background: rgb(92, 89, 89, .6);
+        padding: 10px;
+        color: rgba(255, 255, 255, 0.7);
+        /* border-radius: 20px; */
+        font-size: small;
+        box-shadow: 1px 1px 5px gray;
+        transition: background .5s, color .5s;
+        cursor: pointer;
+    }
+    .visit-button:hover {
+        background: rgb(92, 89, 89, .8);
+        color: white;
+        transition: background .5s, color .5s;
     }
 }
