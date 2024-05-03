@@ -1,0 +1,48 @@
+#projects-container {
+  width: 80vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 15vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(22, 22, 22);
+}
+
+#projects-container p {
+  margin-top: 5vh;
+}
+
+#project-cards-container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* .proj-carousel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.left-swipe,
+.right-swipe {
+  background: red;
+  width: 10px;
+  height: 10px;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+.project-card {
+  min-width: 30vw;
+  padding-right: 30px;
+} */

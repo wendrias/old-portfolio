@@ -1,0 +1,28 @@
+.button {
+  min-width: 50px;
+  height: 20px;
+  text-decoration: none;
+  border-width: 2px;
+  border-style: solid;
+  padding: 20px;
+}
+
+.button-light {
+  border-color: rgba(266, 266, 266, 0.5);
+  background-color: rgba(266, 266, 266, 0.2);
+  color: white;
+  transition: all 0.3s;
+}
+
+.button-light:hover {
+  border-color: rgba(266, 266, 266, 0.6);
+  background-color: rgba(266, 266, 266, 0.3);
+  color: white;
+  transition: all 0.3s;
+}
+
+.button-dark {
+  border-color: white;
+  background-color: black;
+  color: white;
+}

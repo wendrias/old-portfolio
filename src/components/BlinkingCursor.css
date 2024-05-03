@@ -1,0 +1,11 @@
+.blinking-cursor {
+  animation: blink 2s infinite;
+  font-size: 1.2em;
+  font-weight: normal !important;
+}
+
+@keyframes blink {
+  30% {
+    opacity: 0;
+  }
+}

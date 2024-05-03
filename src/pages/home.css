@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  height: 85vh;
+  display: flex;
+  width: 80vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 15vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  /* background-image: url("https://i.redd.it/de5ow9am19p61.gif"); */
+  /* background-image: url("https://media4.giphy.com/media/l0HUme5gGCrlo5Dc4/giphy.gif?cid=6c09b952jxpmwd61xfr5y2pll6ukwuzg88uzwb0dnnsi0x6r&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"); */
+  /* background-image: url("https://media4.giphy.com/media/1pmatQ3LcP5XFYxSWF/giphy.gif?cid=6c09b9523io3nplrlp39rjlzj6to2r51hqsj5yfiov4fvflu&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"); */
+  /* background-image: url("https://img.freepik.com/free-vector/background-abstract-line-digital-gradient-luxury_483537-2367.jpg"); */
+  /* background-image: url("https://th.bing.com/th/id/OIG.q.5PsXMfH8CwBBMai2ui?w=1024&h=1024&rs=1&pid=ImgDetMain"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-container h1 {
+  font-size: 12vh;
+  margin-top: 0;
+  padding-top: 0;
+  line-height: 12vh;
+}
+
+.home-container h4 {
+  margin-bottom: 1vh;
+  font-size: 5vh;
+}
+
+.home-container h3 {
+  font-size: 5vh;
+}
+
+.home-content-container {
+  z-index: 2;
+  margin-bottom: 5vh;
+}
+
+.page-overlay {
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.text-emphasis {
+  color: lightgreen;
+}
+
+.button-container {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* .home-container h3 {
+  margin-bottom: 50px;
+} */
+
+.page-tracker {
+  height: 40vh;
+  width: 1px;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+  left: 10vw;
+  top: 20vh;
+}
