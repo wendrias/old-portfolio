@@ -27,7 +27,7 @@ function Projects() {
         <ProjectCard
           title="Pic2Playlist (Beta)"
           description="A tool that takes user-inputted image and creates a Spotify playlist based on data from Google Cloud Vision and Clarifai image processing AIs."
-          tech={["one", "two", "three", "four"]}
+          tech={["HTML/CSS", "JavaScript", "NodeJS", "REST API"]}
           picture="./img/p2p.png"
           link="/"
         />
@@ -55,7 +55,7 @@ function Projects() {
         <ProjectCard
           title="Slide-Up Music Player Design"
           description="Prototype of music player that slides up when toggled."
-          tech={["HTML/CSS", "JavaScript", "PHP"]}
+          tech={["HTML/CSS", "JavaScript"]}
           picture="./img/music.png"
           link="/"
         />
